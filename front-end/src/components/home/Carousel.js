@@ -15,16 +15,9 @@ class Carousel extends Component{
 		}
         return(
             <Slider {...settings}>
-                <div className="slick-image"><img src="images/screenshots/img_1.png" alt=""/></div>
-                <div className="slick-image"><img src="images/screenshots/img_2.png" alt=""/></div>
-                <div className="slick-image"><img src="images/screenshots/img_3.png" alt=""/></div>
-                <div className="slick-image"><img src="images/screenshots/img_4.png" alt=""/></div>
-                <div className="slick-image"><img src="images/screenshots/img_5.png" alt=""/></div>
-                <div className="slick-image"><img src="images/screenshots/img_6.png" alt=""/></div>
-                <div className="slick-image"><img src="images/screenshots/img_7.png" alt=""/></div>
-                <div className="slick-image"><img src="images/screenshots/img_8.png" alt=""/></div>
-                <div className="slick-image"><img src="images/screenshots/img_9.png" alt=""/></div>
-                <div className="slick-image"><img src="images/screenshots/img_10.png" alt=""/></div>
+                <div className="slick-image"><img src="images/homepage1_1.jpg" alt=""/></div>
+                <div className="slick-image"><img src="images/homepage1_2.jpg" alt=""/></div>
+                <div className="slick-image"><img src="images/homepage1_3.jpg" alt=""/></div>
             </Slider>
         )
     }
