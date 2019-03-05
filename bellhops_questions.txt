@@ -1,0 +1,20 @@
+how do the svg path polygons work
+how does the autofill for google and other login methods work
+why materialize versus others
+how much css is borrowed from materialize
+the react dev tool in chrome versus the regular elements tab, and how 
+invoca:no campaign id's were found, not requesting any numbers/ use invoca.pnapi.display() to view debugging
+transitions for photos are nice
+tim Haley
+peter Hegemeyer
+react
+redux?
+
+front end engineer
+lead front end engineer
+entry level engineer - maybe a good fit for me
+
+java react ruby redux
+
+
+

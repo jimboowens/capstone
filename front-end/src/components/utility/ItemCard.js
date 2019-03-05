@@ -14,7 +14,7 @@ function GameCard(props){
             <img className="activator" src={image} alt="" />
             </div>
             <div className="card-content">
-            <span className="card-title activator grey-text text-darken-4">{props.game.name}<i className="material-icons right">more_vert</i></span>
+            <span className="card-title activator grey-text text-darken-4">{props.item.name}<i className="material-icons right">more_vert</i></span>
             {/* <p><a href={props.game.url}>Game homepage</a></p> */}
             </div>
         </div>

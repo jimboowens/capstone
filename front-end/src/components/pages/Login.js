@@ -29,10 +29,10 @@ class Login extends Component{
 
     handleLogin = (event)=>{
         event.preventDefault()
-        const username = event.target[0].value
+        const email = event.target[0].value
         const password = event.target[1].value
         this.props.loginAction({
-            username,
+            email,
             password,
         })
     }
@@ -48,7 +48,7 @@ class Login extends Component{
            />
             <center>
             <div className="container">
-                <div className="z-depth-1 grey lighten-4 row login">
+                <div className="z-depth-1 teal darken-3 row login">
                 <form className="col s12" onSubmit={this.handleLogin}>
                     <div className='row'>
                         <div className='col s12'></div>
@@ -71,7 +71,7 @@ class Login extends Component{
                     <br />
                     <center>
                     <div className='row'>
-                        <button type='submit' name='btn_login' className='col s12 btn btn-large waves-effect grey'>Login</button>
+                        <button type='submit' name='btn_login' className='col s12 btn btn-large waves-effect teal darken-4'>Login</button>
                     </div>
                     </center>
                 </form>

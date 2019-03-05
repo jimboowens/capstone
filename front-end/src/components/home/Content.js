@@ -1,34 +1,34 @@
 import React, { Component } from 'react';
-import GameCard from '../utility/GameCard';
+import ItemCard from '../utility/ItemCard';
 import axios from 'axios';
 
 class Content extends Component{
     constructor(){
         super()
         this.state={
-            games:[]
+            items:[]
         }
     }
 
     componentDidMount(){
-        const gamesPromise = axios.get(`${window.apiHost}/games/getHome`)
-        gamesPromise.then((response)=>{
+        const itemsPromise = axios.get(`${window.apiHost}/items/getHome`)
+        itemsPromise.then((response)=>{
             // console.log(response.data)
-            const games = response.data
+            const items = response.data
             this.setState({
-                games:games,
+                items,
             })
         })
     }
 
     render(){
-        const gameCards = this.state.games.map((game,i)=>{
-            return <GameCard key={i} game={game}/>
+        const itemCards = this.state.items.map((item,i)=>{
+            return <ItemCard key={i} game={item}/>
         })
         return(
             <div className="row">
                 <div className="col s12">
-                {gameCards}
+                {itemCards}
                 </div>
             </div>
         )

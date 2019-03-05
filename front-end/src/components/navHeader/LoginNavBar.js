@@ -24,22 +24,26 @@ class LoginNavBar extends Component{
 
     render(){
         // console.log(this.props)
-        if(this.props.auth.username !== undefined){
+        if(this.props.auth.token){
             // then user is logged in
-            rightNavBar=<span>welcome, {this.props.auth.username}<Link to="/cart">MY CART {this.props.cart.totalitems}{this.props.cart.totalprice}</Link></span>
+            rightNavBar=<span>
+                Welcome, {this.props.auth.username}! 
+                <Link className="mainLinks" to="cart">MY CART {this.props.cart.totalitems}{this.props.cart.totalprice}</Link>
+                <Link className="mainLinks" to="logout">Log Out</Link>
+            </span>
         } else{
             rightNavBar=
             <span>
-                <Link className="loginLinks" to="/login">Sign in</Link>,<Link className="loginLinks" to="/register">Register</Link>,
-                or Log in with<Link className="loginLinks" onClick={this.githubAuth} to="/"> GitHub</Link>
-                <Link className="loginLinks" to="/cart"> My Cart {this.props.cart.total}{this.props.cart.items}</Link>
+                <Link className="mainLinks" to="login">Sign in</Link>,<Link className="mainLinks" to="register">Register</Link>,
+                or Log in with<Link className="mainLinks" onClick={this.githubAuth} to="/"> GitHub</Link>
+                <Link className="mainLinks" to="cart"> My Cart {this.props.cart.total}{this.props.cart.items}</Link>
             </span>
         }
         return(
             
             <div className="login-nav-bar">
                 <div className="left valign-wrapper">
-                    WELCOME TO : <Link to="/"> ZAPP GAMES</Link>
+                    WELCOME TO : <Link to="/" className="mainLinks"> eBuy</Link>
                 </div>
                 <div className="right">
                     {rightNavBar}
