@@ -50,7 +50,7 @@ function sendToken(res,token){
 router.post('/search', (req,res)=>{
   console.log(req.body.searchCriteria)
   const searchCriteria=req.body.searchCriteria;
-  const searchQuery = `select * from games where name like $1`
+  const searchQuery = `select * from items where name like $1`
   db.query(searchQuery,[searchCriteria]).then((results)=>{
     console.log(results)
     res.json(results)
@@ -59,51 +59,61 @@ router.post('/search', (req,res)=>{
 
 router.post('/register',(req,res)=>{
   // console.log('b/e is working')
-  const checkUsernameQuery = `SELECT * FROM users WHERE username = $1`
+  console.log(req.body)
+  const checkUsernameQuery = `SELECT * FROM users WHERE email = $1`
   db.query(checkUsernameQuery,[req.body.username]).then((results)=>{
     // console.log (req.body.username)
     if(results.length === 0){
+      
       // console.log(results)
         const token = randToken.uid(50)// this is for login to keep logged in after page refresh
-        // use bcrypt.hashsync to make password something random
-        const hash = bcrypt.hashSync(req.body.password)
+        const hash = bcrypt.hashSync(req.body.password)// use bcrypt.hashsync to make password something random
+        const username = req.body.username
+        const email = req.body.email
+        const adminRequestStatus = req.body.adminRequestStatus
+        let adminToken;
+        adminRequestStatus===true? adminToken="requested":adminToken=null
         res.json({
           msg:"user added",
           token,
-          username:req.body.username
+          username,
+          adminToken,
         })
-      // user does not exits, let's add them
-      const insertUserQuery = `INSERT INTO users (username,password,token) VALUES ($1,$2,$3)`
-      db.query(insertUserQuery,[req.body.username,hash,token]).then(()=>{
-        // console.log('added')
+      // user does not exist, let's add them
+      const insertUserQuery = `INSERT INTO users (email,username,password,token,admintoken) VALUES ($1,$2,$3,$4,$5)`
+      db.query(insertUserQuery,[email,username,hash,token,adminToken]).then(()=>{
+        console.log('added')
       })
     } else {
       // console.log('exists')
-
       res.json({msg:"user exists"})
     }
   }).catch((err)=> {if (err) err})
 })
 
 router.post('/login',(req,res)=>{
-  const username = req.body.username;
+  // console.log(req.body)
+  const email = req.body.email;
   const password = req.body.password;
   // get the row with this username
-  const selectUserQuery = `select * from users where username = $1`
-  db.query(selectUserQuery,[username]).then((results)=>{
+  const selectUserQuery = `select * from users where email = $1`
+  db.query(selectUserQuery,[email]).then((results)=>{
     if(results.length === 0){
       res.json({msg:'bad romance'})
     }else{
       const checkHash = bcrypt.compareSync(password,results[0].password)
+      const username = results[0].username
+      const adminToken = results[0].admintoken
       if (checkHash){
         // match! create a new token
         const token = randToken.uid(50)
-        const updateTokenQuery = `update users set token = $1 where username = $2`
-        db.query(updateTokenQuery,[token, username]).catch((err)=>{if (err) throw err})
+        const updateTokenQuery = `update users set token = $1 where email = $2`
+        db.query(updateTokenQuery,[token, email]).catch((err)=>{if (err) throw err})
         res.json({
           msg:"user logged in",
           token,
           username,
+          adminToken,
         })
       }else {
         res.json({
@@ -116,6 +126,7 @@ router.post('/login',(req,res)=>{
 
 router.post('/stripe',(req,res)=>{
   console.log(req.body)
+  res.json(req.body)
 })
 
 module.exports = router;

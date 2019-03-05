@@ -8,7 +8,7 @@ class Headers extends Component{
     render(){
         return (
             <div className="header">
-                <div className="center grey darken-4 main-header">
+                <div className="center teal darken-4 main-header">
                     <div className="container row">
                         <LoginNavBar />
                     </div>

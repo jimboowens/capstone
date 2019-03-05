@@ -15,7 +15,7 @@ app.use(helmet());
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization, X-ACCESS_TOKEN, Access-Control-Allow-Origin, Authorization, Origin, x-requested-with, Content-Type, Content-Range, Content-Disposition, Content-Description")
     next();
   });
 
@@ -45,8 +45,9 @@ passport.deserializeUser((user,callback)=> callback(null,user))
 
 
 var indexRouter = require('./routes/index');
-var gamesRouter = require('./routes/games')
+var itemsRouter = require('./routes/items')
 var cartRouter = require('./routes/cart')
+
 
 
 app.use(logger('dev'));
@@ -56,7 +57,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/games',gamesRouter);
+app.use('/items',itemsRouter);
 app.use('/cart',cartRouter);
 
 module.exports = app;

@@ -25,12 +25,9 @@ class LogoSearchHeader extends Component{
     render(){
         return(
             <div className="logo-search-header">
-                <div className="left-align">
-                    <img src="/images/zapp.jpg" alt=""/>
-                </div>
                 <div className="right-align">
                     <form onSubmit={this.searchSubmit}>
-                        <input type="text" placeholder="Search" />
+                        <input type="text" placeholder="Search items for sale" />
                     </form>
                 </div>            
             </div>
