@@ -2,8 +2,26 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 
 class MainNav extends Component{
+    
     render(){
-        console.log(this.state)
+        // console.log(this.props.auth)
+        if (this.props.auth===undefined){
+            return(
+                <div className="main-nav">
+                    <nav>
+                        <div className="nav-wrapper teal darken-2">
+                            <ul className="left hide-on-med-and-down">
+                                <li><Link className="active" to="login">Post an Item for Sale</Link></li>
+                                <li><Link className="active" to="login">Favorites</Link></li>
+                                <li><Link className="active" to="login">Find Deals</Link></li>
+                                <li><Link className="active" to="login">Find Deals Under $10</Link></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            )
+        }
+
         return(
             <div className="main-nav">
                 <nav>
@@ -15,8 +33,7 @@ class MainNav extends Component{
                             <li><Link className="active" to="under$10">Find Deals Under $10</Link></li>
                         </ul>
                     </div>
-            </nav>      
-
+                </nav>
             </div>
         )
     }

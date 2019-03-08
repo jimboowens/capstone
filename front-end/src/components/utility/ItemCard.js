@@ -2,10 +2,8 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 
 function ItemCard(props){
-    console.log(props.item);
-    const images = props.item.picture.split(',');
-    const rand = Math.floor(Math.random() * images.length)
-    const image = images[rand];
+    // console.log(props.item);
+    const image = props.item.picture
     return(
         <div className="col s3 item-card">
             <Link to={`/items/${props.item.id}`}>

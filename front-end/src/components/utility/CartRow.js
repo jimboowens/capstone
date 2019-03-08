@@ -5,7 +5,7 @@ import React from 'react';
 function CartRow(props){
 	const product = props.product;
 	return(
-		<tr>
+		<tr className="item-container">
 			<td>{product.name}</td>
 			<td>{product.price}</td>
 			<td><button className="btn btn-danger">Delete</button></td>

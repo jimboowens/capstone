@@ -19,3 +19,11 @@
 .login-nav-bar{
     padding-top:15px;
 }
+.item-container img{
+    margin-top:15px;
+    max-width:250px;
+}
+
+.item-container{
+    background-color: rgba(21,21,21,.4);
+}
