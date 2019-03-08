@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 
 class MainNav extends Component{
     render(){
@@ -8,10 +9,10 @@ class MainNav extends Component{
                 <nav>
                     <div className="nav-wrapper teal darken-2">
                         <ul className="left hide-on-med-and-down">
-                            <li className="active"><a href="post">Post an Item for Sale</a></li>
-                            <li className="active"><a href="favorited">Favorites</a></li>
-                            <li className="active"><a href="deals">Find Deals</a></li>
-                            <li className="active"><a href="deals/under$10">Find Deals Under $10</a></li>
+                            <li><Link className="active" to="post">Post an Item for Sale</Link></li>
+                            <li><Link className="active" to="favorites">Favorites</Link></li>
+                            <li><Link className="active" to="deals">Find Deals</Link></li>
+                            <li><Link className="active" to="under$10">Find Deals Under $10</Link></li>
                         </ul>
                     </div>
             </nav>      

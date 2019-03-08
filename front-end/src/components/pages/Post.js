@@ -29,7 +29,7 @@ class Login extends Component{
 
     handlePost = (event)=>{
         event.preventDefault()
-        // console.dir(event.target[3].files)
+        console.dir(event.target)
         const name = event.target[0].value
         const description = event.target[1].value
         const price = event.target[2].value
@@ -58,25 +58,25 @@ class Login extends Component{
                     <div className='row'>
                         <div className="input-field col s12">
                             <input id="name" type="text" className="validate" />
-                            <label htmlFor="name">Item Name</label>
+                            <label htmlFor="name"><i className="material-icons">info</i> Item Name</label>
                         </div>
                     </div>
                     <div className='row'>
                         <div className="input-field col s12">
                             <input id="description" type="text" className="validate" />
-                            <label htmlFor="description">Item description</label>
+                            <label htmlFor="description"><i className="material-icons">insert_comment</i> Item description</label>
                         </div>
                     </div>
                     <div className='row'>
                         <div className="input-field col s12">
                             <input id="price" type="text" className="validate" />
-                            <label htmlFor="price">Item Price</label>
+                            <label htmlFor="price"><i className="material-icons">attach_money</i> Item Price</label>
                         </div>
                     </div>
                     <div className="file-field input-field">
                         <div className="btn">
-                        <span>File</span>
-                        <input type="file" multiple />
+                        <span><i className="material-icons">insert_photo</i> Attach Photo(s)</span>
+                        <input name="images" type="file" multiple />
                     </div>
                         <div className="file-path-wrapper">
                             <input className="file-path validate" type="text" placeholder="Upload one or more files" />

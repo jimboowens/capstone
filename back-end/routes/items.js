@@ -36,6 +36,7 @@ var upload = multer({ dest: 'public/images' })
 
 
 router.get('/getHome',(req,res)=>{
+    // console.log(req.body)
     // res.json('items')
     const gameQuery = `select * from items where picture is not null order by random() limit 4`
     db.query(gameQuery).then((results)=>{
@@ -45,7 +46,7 @@ router.get('/getHome',(req,res)=>{
 })
 
 router.get('/:id', (req,res)=>{
-    // console.log(req.params)
+    console.log(req.params)
     const gid = req.params.id
     const gameQuery = `select * from items where id = $1`
     db.query(gameQuery,[gid]).then((itemData)=>{
@@ -53,27 +54,29 @@ router.get('/:id', (req,res)=>{
         res.json(itemData)
     }).catch((err)=>{if(err) throw err})
 })
-// router.post('/postItem',upload.array("images",12),(req,res)=>{
-// console.log("req.body is: ",req.body)
-//     const tmpPath = req.file.path;
-//     const targetPath = `public/images/${req.file.originalname}`;
-//     fs.readFile(tmpPath,(err,fileContents)=>{
-//         if(err)throw err;
-//         fs.writeFile(targetPath,fileContents,(err2)=>{
-//             if(err2)throw err2;
-//             const insertQuery = `insert into items (name,description,price,picture) values ($1,$2,$3,$4);`;
-//             db.query(insertQuery,[]).then((results)=>{
-//                 console.log(results)
-//                 fs.unlink(tmpPath);
-//                 res.redirect('/?msg=fileUploaded');
-//             }).catch((err)=>{if(er) throw err})
-//         });
-//     });
-// })
 
-router.post('/postItem',(req,res)=>{
-    console.log("req.body is: ",req.body)
-    res.json(req.images)
+router.post('/postItem',upload.array("pictureList",12),(req,res)=>{
+    console.log(req.body)
+    const tmpPath = req.files.path;
+    const targetPath = `public/images/${req.file.image}`;
+    fs.readFile(tmpPath,(err,fileContents)=>{
+        if(err)throw err;
+        fs.writeFile(targetPath,fileContents,(err2)=>{
+            if(err2)throw err2;
+            const insertQuery = `insert into items (name,description,price,picture) values ($1,$2,$3,$4);`;
+            db.query(insertQuery,[]).then((results)=>{
+                console.log(results)
+                fs.unlink(tmpPath);
+                res.redirect('/?msg=fileUploaded');
+            }).catch((err)=>{if(er) throw err})
+        });
+    });
 })
+
+// router.post('/postItem',(req,res)=>{
+//     console.log("req.body is: ",req.body)
+//     console.log("req.files is: ",req.files)
+//     res.json(req.images)
+// })
 
 module.exports = router;

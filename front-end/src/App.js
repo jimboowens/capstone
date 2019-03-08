@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import {BrowserRouter as Router,Route} from 'react-router-dom'
 import Home from './components/home/Home'
 import Headers from './components/navHeader/Headers';
@@ -11,6 +10,10 @@ import Logout from './components/pages/Logout';
 import Post from './components/pages/Post';
 import Favorites from './components/pages/Favorites';
 import Deals from './components/pages/Deals';
+import About from './components/pages/About';
+import Contact from './components/pages/Contact';
+import Careers from './components/pages/Careers';
+import Support from './components/pages/Support';
 import './App.css'
 
 class App extends Component {
@@ -29,6 +32,10 @@ class App extends Component {
             <Route exact path="/post" component={Post}/>
             <Route exact path="/favorites" component={Favorites}/>
             <Route exact path="/deals" component={Deals}/>
+            <Route exact path="/about" component={About}/>
+            <Route exact path="/contact" component={Contact}/>
+            <Route exact path="/careers" component={Careers}/>
+            <Route exact path="/support" component={Support}/>
           </div>
         </div>
       </Router>
