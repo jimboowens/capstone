@@ -11,9 +11,9 @@ router.post('/getCart',(req,res)=>{
         if (results.length ===0){res.json({msg:'bad token'})}
         else {
             const uid = results[0].id
-            const getCartTotals = `select * from cart inner join games on games.id = cart.gid where uid = $1`
+            const getCartTotals = `select * from cart inner join items on items.id = cart.gid where uid = $1`
             db.query(getCartTotals,[uid]).then((results)=>{
-                const totals = `select sum(price) as totalprice, count(price) as totalitems from cart inner join games on games.id = cart.gid where uid = $1`
+                const totals = `select sum(price) as totalprice, count(price) as totalitems from cart inner join items on items.id = cart.gid where uid = $1`
                 db.query(totals,[uid]).then((totalNumbers)=>{
                     const responseData = {
                         contents:results,

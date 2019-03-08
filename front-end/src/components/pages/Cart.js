@@ -56,7 +56,9 @@ class Cart extends Component{
 	}
 
 	render(){
-		// console.log(this.props.cart);
+
+		console.log("this.props is:");
+		console.log(this.props);
 		if(!this.props.cart.items){
 			// if this return occurs, the render is DONE
 			return(
@@ -68,7 +70,9 @@ class Cart extends Component{
 			var cartArray = this.props.cart.contents.map((product,index)=>{
 				// console.log(product)
 				return (
+					
 						<CartRow key={index} product={product}></CartRow>
+				
 				)
 			})
 			return(

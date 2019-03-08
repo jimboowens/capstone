@@ -13,6 +13,11 @@ class LogoSearchHeader extends Component{
         }
     }
 
+    componentWillReceiveProps(newProps){
+        console.log("component received new props")
+        console.log(newProps)
+    }
+
     searchSubmit=(event)=>{
         event.preventDefault()
         console.log(event.target[0].value)

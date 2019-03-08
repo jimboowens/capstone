@@ -1,13 +1,14 @@
 html{
     background-color:#004d40;
-    /* overflow:hidden; */
+    overflow:auto;
+    height:100vh;
 }
 
 body{
     /* margin-top:30px; */
     background-image: url('/images/main_background.png');
     background-size:cover;
-
+    height:100vh;
 }
 
 .underConstruction{

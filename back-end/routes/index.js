@@ -52,6 +52,7 @@ router.post('/search', (req,res)=>{
   const searchCriteria=req.body.searchCriteria;
   const searchQuery = `select * from items where name like $1`
   db.query(searchQuery,[searchCriteria]).then((results)=>{
+    console.log("results")
     console.log(results)
     res.json(results)
   }).catch((err)=>{if(err) throw err})
@@ -128,5 +129,7 @@ router.post('/stripe',(req,res)=>{
   console.log(req.body)
   res.json(req.body)
 })
+
+
 
 module.exports = router;

@@ -41,64 +41,65 @@ class Login extends Component{
 
     render(){
         return(
-        <main>
-            <SweetAlert
-               show={this.state.showAlert}
-               title="Sign-in Error"
-               text="Email/password is not valid. Please re-enter your information or register."
-               onConfirm={() => this.setState({ showAlert: false })}
-           />
-            <center>
-            <div className="container">
-                <div className="z-depth-1 teal darken-3 row login">
-                <form className="col s12" onSubmit={this.handlePost} encType="multipart/form-data">
-                    <div className='row'>
-                        <div className='col s12'></div>
-                    </div>
-                    <div className='row'>
-                        <div className="input-field col s12">
-                            <input id="name" type="text" className="validate" />
-                            <label htmlFor="name"><i className="material-icons">info</i> Item Name</label>
+            <main>
+                <SweetAlert
+                show={this.state.showAlert}
+                title="Sign-in Error"
+                text="Email/password is not valid. Please re-enter your information or register."
+                onConfirm={() => this.setState({ showAlert: false })}
+                />
+                <center>
+                <div className="container">
+                    <div className="z-depth-1 teal darken-3 row login">
+                    <form className="col s12" onSubmit={this.handlePost} encType="multipart/form-data">
+                        <div className='row'>
+                            <div className='col s12'></div>
                         </div>
-                    </div>
-                    <div className='row'>
-                        <div className="input-field col s12">
-                            <input id="description" type="text" className="validate" />
-                            <label htmlFor="description"><i className="material-icons">insert_comment</i> Item description</label>
+                        <div className='row'>
+                            <div className="input-field col s12">
+                                <input id="name" type="text" className="validate" />
+                                <label htmlFor="name"><i className="material-icons">info</i> Item Name</label>
+                            </div>
                         </div>
-                    </div>
-                    <div className='row'>
-                        <div className="input-field col s12">
-                            <input id="price" type="text" className="validate" />
-                            <label htmlFor="price"><i className="material-icons">attach_money</i> Item Price</label>
+                        <div className='row'>
+                            <div className="input-field col s12">
+                                <input id="description" type="text" className="validate" />
+                                <label htmlFor="description"><i className="material-icons">insert_comment</i> Item description</label>
+                            </div>
                         </div>
-                    </div>
-                    <div className="file-field input-field">
-                        <div className="btn">
-                        <span><i className="material-icons">insert_photo</i> Attach Photo(s)</span>
-                        <input name="images" type="file" multiple />
-                    </div>
-                        <div className="file-path-wrapper">
-                            <input className="file-path validate" type="text" placeholder="Upload one or more files" />
+                        <div className='row'>
+                            <div className="input-field col s12">
+                                <input id="price" type="text" className="validate" />
+                                <label htmlFor="price"><i className="material-icons">attach_money</i> Item Price</label>
+                            </div>
                         </div>
+                        <div className="file-field input-field">
+                            <div className="btn">
+                            <span><i className="material-icons">insert_photo</i> Attach Photo(s)</span>
+                            <input name="images" type="file" multiple />
+                        </div>
+                            <div className="file-path-wrapper">
+                                <input className="file-path validate" type="text" placeholder="Upload one or more files" />
+                            </div>
+                        </div>
+                        <br />
+                        <center>
+                        <div className='row'>
+                            <button type='submit' name='btn_login' className='col s12 btn btn-large waves-effect teal darken-4'>Post Item</button>
+                        </div>
+                        </center>
+                    </form>
                     </div>
-                    <br />
-                    <center>
-                    <div className='row'>
-                        <button type='submit' name='btn_login' className='col s12 btn btn-large waves-effect teal darken-4'>Post Item</button>
-                    </div>
-                    </center>
-                </form>
                 </div>
-            </div>
-            <Link to="/post/postCompleted" >Post item for sale</Link>
-            </center>
-            <div className="section"></div>
-            <div className="section"></div> 
-        </main>
+                <Link to="/post/postCompleted" >Post item for sale</Link>
+                </center>
+                <div className="section"></div>
+                <div className="section"></div> 
+            </main>
         )
     }
 }
+
 
 function mapStateToProps(state){
     return({
