@@ -1,21 +1,21 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 
-function GameCard(props){
-    // console.log(props.game);
-    const images = props.game.screenshot_url.split(',');
+function ItemCard(props){
+    console.log(props.item);
+    const images = props.item.picture.split(',');
     const rand = Math.floor(Math.random() * images.length)
     const image = images[rand];
     return(
-        <div className="col s3 game-card">
-            <Link to={`/game/${props.game.id}`}>
+        <div className="col s3 item-card">
+            <Link to={`/items/${props.item.id}`}>
             <div className="card">
             <div className="card-image waves-effect waves-block waves-light">
             <img className="activator" src={image} alt="" />
             </div>
             <div className="card-content">
-            <span className="card-title activator grey-text text-darken-4">{props.item.name}<i className="material-icons right">more_vert</i></span>
-            {/* <p><a href={props.game.url}>Game homepage</a></p> */}
+            <span className="card-title activator teal-text text-darken-3">{props.item.name}<i className="material-icons right">more_vert</i></span>
+            {/* <p><a href={props.item.url}>eBuy homepage</a></p> */}
             </div>
         </div>
         </Link>        
@@ -23,4 +23,4 @@ function GameCard(props){
     )
 }
 
-export default GameCard;
+export default ItemCard;

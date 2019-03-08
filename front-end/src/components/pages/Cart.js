@@ -73,7 +73,7 @@ class Cart extends Component{
 			})
 			return(
 				<div>
-					<h2>Your order total is: ${this.props.cart.total} - <button className="btn btn-primary" onClick={this.makePayment}>Proceed to Checkout</button></h2>
+					<h2>Your order total is: ${this.props.cart.total} - <button className="btn btn-primary" onClick={this.makePayment}><i class="material-icons">shopping_cart</i>Proceed to Checkout</button></h2>
 					<table className="table table-striped">
 						<thead>
 							<tr>
@@ -88,7 +88,7 @@ class Cart extends Component{
 						{/* <tfoot>
 							<div>
 								<tr>Proceed to Checkout</tr>
-								<tr><button className="btn btn-primary" onClick=""></button></tr>
+								<tr><button className="btn btn-primary" onClick="{this.makepayment}</button><i class="material-icons">shopping_cart</i></tr>
 							</div>
 						</tfoot> */}
 					</table>
@@ -102,7 +102,6 @@ function mapStateToProps(state){
 	return{
 		auth: state.auth,
 		cart: state.cart,
-		// StripeCheckout:state.StripeCheckout,
 	}
 }
 

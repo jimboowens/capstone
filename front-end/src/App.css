@@ -9,6 +9,12 @@ body{
     background-size:cover;
 
 }
+
+.underConstruction{
+    font-size: 5vw;
+}
+
+
 @keyframes App-logo-spin{
     from{
         transform:rotate (0 deg)
