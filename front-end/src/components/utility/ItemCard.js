@@ -12,7 +12,7 @@ function ItemCard(props){
             <img className="activator" src={image} alt="" />
             </div>
             <div className="card-content">
-            <span className="card-title activator teal-text text-darken-3">{props.item.name}<i className="material-icons right">more_vert</i></span>
+            {props.item.name}
             {/* <p><a href={props.item.url}>eBuy homepage</a></p> */}
             </div>
         </div>

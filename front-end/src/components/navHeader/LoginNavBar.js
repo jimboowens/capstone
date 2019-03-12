@@ -5,6 +5,7 @@ import loginTab from '../../misc/OpenWindow';
 import {connect} from 'react-redux';
  // The process: (will be enumerated to come)
 let rightNavBar = <br></br>;
+
 class LoginNavBar extends Component{
 
     githubAuth = ()=>{
@@ -23,20 +24,18 @@ class LoginNavBar extends Component{
             // 8. Put it in localstorage so we can use it next time.
 
     render(){
-        // console.log(this.props)
         if(this.props.auth.token){
             // then user is logged in
             rightNavBar=<span>
-                Welcome, {this.props.auth.username}! 
-                <Link className="mainLinks" to="cart">MY CART {this.props.cart.totalitems}{this.props.cart.totalprice}</Link>
-                <Link className="mainLinks" to="logout">Log Out</Link>
-            </span>
+                    Welcome, {this.props.auth.username}! 
+                    <Link className="mainLinks" to="cart"><i className="material-icons">shopping_cart</i></Link>
+                    <Link className="mainLinks" to="logout">Log Out</Link>
+                    </span>
         } else{
             rightNavBar=
             <span>
-                <Link className="mainLinks" to="login">Sign in</Link>,<Link className="mainLinks" to="register">Register</Link>,
-                or Log in with<Link className="mainLinks" onClick={this.githubAuth} to="/"> GitHub</Link>
-                <Link className="mainLinks" to="cart"> My Cart {this.props.cart.total}{this.props.cart.items}</Link>
+                <Link className="mainLinks" to="login">Sign in</Link>, or <Link className="mainLinks" to="register">Register</Link>
+                <Link className="mainLinks" to="cart"><i className="material-icons">remove_shopping_cart</i></Link>
             </span>
         }
         return(

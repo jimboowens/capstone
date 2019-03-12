@@ -2,11 +2,20 @@ html{
     background-color:#004d40;
     overflow:auto;
     height:100vh;
+    font-family: 'Simplifica';
+    letter-spacing:1.5px
 }
+
+@font-face {
+    font-family:"Simplifica";
+    src: url("./Simplifica.ttf") format("truetype");
+  }
 
 body{
     /* margin-top:30px; */
-    background-image: url('/images/main_background.png');
+
+    background-image: linear-gradient(#b9bebe67,#004d40), url('/images/background_images/main_background.png');
+    display:fixed;
     background-size:cover;
     height:100vh;
 }

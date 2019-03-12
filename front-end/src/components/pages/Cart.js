@@ -4,24 +4,28 @@ import { bindActionCreators } from 'redux';
 import cartAction from '../../actions/cartAction';
 import CartRow from '../utility/CartRow';
 import axios from 'axios';
+import SweetAlert from 'sweetalert-react';
+import 'sweetalert/dist/sweetalert.css'
 
 class Cart extends Component{
 	constructor(){
 		super();
 		this.state={
 			totalItems:[],
+			showAlert:false,
+			title:'',
+			text:'',
+			msg:''
 		}
 	}
 
 	makePayment=()=>{
 		// console.log(window.StripeCheckout)
         var handler = window.StripeCheckout.configure({
-            key: 'pk_test_K9L17worNm0z7lHpdssTpwqr',
+            key: 'pk_test_ONdQWDuFBm8JYUk46kadwInk',
             locale: 'auto',
-            image: 'http://www.digitalcrafts.com/sites/all/themes/digitalcrafts/images/digitalcrafts-site-logo.png',
+            image: 'images/shopping-cart.png',
             token: (token)=>{
-            	console.log(token);
-            	console.log(this.props.auth.token);
                 var theData = {
                     amount: this.props.cart.totalPrice * 100, //  the total is in pennies
                     stripeToken: token.id,
@@ -29,11 +33,11 @@ class Cart extends Component{
                 }
                 axios({
                     method: 'POST',
-                    url: `${window.apiHost}/stripe`,
+                    url: `${window.apiHost}/cart/stripe`,
                     data: theData
                 }).then((response) => {
-                    console.log(response);
-                    response.data.msg === 'paymentSuccess' ? this.props.history.push('/thankyou') : console.log(response.data.msg)
+                    // console.log(response);
+                    response.data.msg === 'paymentSuccess' ? this.props.history.push('/?thankYou') : console.log(response.data.msg)
                 });
             }
         });
@@ -52,14 +56,21 @@ class Cart extends Component{
 		}else{
 			// the user does have a token, go get their cart!
 			this.props.cartAction(this.props.auth.token);
+			
 		}
 	}
 
-	render(){
+	componentWillUpdate(newProps){
+		if (newProps.location.search==="?item=deleted"&&this.props.location.search !=="?item=deleted" && this.props.msg==="item deleted"){
+			
+			this.setState({showAlert:true,title:"Item deleted!", text:"We have updated your cart. Continue shopping, or click on the cart to proceed to checkout.",}) 
+		}
 
-		console.log("this.props is:");
-		console.log(this.props);
-		if(!this.props.cart.items){
+	}
+
+	render(){
+		// console.log(this.props)
+		if(!this.props.cart.items && !this.props.cart.msg){
 			// if this return occurs, the render is DONE
 			return(
 				<div className="cartBody">
@@ -67,20 +78,19 @@ class Cart extends Component{
 				</div>
 			)
 		}else{
-			var cartArray = this.props.cart.contents.map((product,index)=>{
-				// console.log(product)
+			var cartArray = this.props.cart.contents.map((product,i)=>{
 				return (
-					
-						<CartRow key={index} product={product}></CartRow>
-				
+					<CartRow key={i} product={product} history={this.props.history}></CartRow>
 				)
 			})
 			return(
 				<div>
-					<h2>Your order total is: ${this.props.cart.total} - <button className="btn btn-primary" onClick={this.makePayment}><i class="material-icons">shopping_cart</i>Proceed to Checkout</button></h2>
+					<SweetAlert show={this.state.showAlert} title={this.state.title} text={this.state.text}  onConfirm={()=>this.setState({showAlert: false})} />
+					<h2>Your order total is: ${this.props.cart.total} - <button className="btn btn-primary" onClick={this.makePayment}><i className="material-icons">shopping_cart</i>Proceed to Checkout</button></h2>
 					<table className="table table-striped">
 						<thead>
 							<tr>
+								{/* <th>Image</th> */}
 								<th>Product</th>
 								<th>Price</th>
 								<th>Remove</th>
@@ -89,12 +99,6 @@ class Cart extends Component{
 						<tbody>
 							{cartArray}
 						</tbody>
-						{/* <tfoot>
-							<div>
-								<tr>Proceed to Checkout</tr>
-								<tr><button className="btn btn-primary" onClick="{this.makepayment}</button><i class="material-icons">shopping_cart</i></tr>
-							</div>
-						</tfoot> */}
 					</table>
 				</div> 	 
 			)
