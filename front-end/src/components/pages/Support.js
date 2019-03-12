@@ -15,29 +15,12 @@ class Support extends Component{
         console.log('Support Screen')
         return(
             <main>
-                <div>
-                    <i className="large material-icons">do_not_disturb_on</i>
-                    <i className="large material-icons">do_not_disturb_on</i>
-                    <i className="large material-icons">do_not_disturb_on</i>
-                    <i className="large material-icons">do_not_disturb_on</i>
-                    <i className="large material-icons">do_not_disturb_on</i>
-                    <i className="large material-icons">do_not_disturb_on</i>
-                    <i className="large material-icons">do_not_disturb_on</i>
-                    <i className="large material-icons">do_not_disturb_on</i>
-                    <i className="large material-icons">do_not_disturb_on</i>
-                    <i className="large material-icons">do_not_disturb_on</i>
-                    <div className="underConstruction">UNDER CONSTRUCTION</div>
-                    <i className="large material-icons">do_not_disturb_on</i>
-                    <i className="large material-icons">do_not_disturb_on</i>
-                    <i className="large material-icons">do_not_disturb_on</i>
-                    <i className="large material-icons">do_not_disturb_on</i>
-                    <i className="large material-icons">do_not_disturb_on</i>
-                    <i className="large material-icons">do_not_disturb_on</i>
-                    <i className="large material-icons">do_not_disturb_on</i>
-                    <i className="large material-icons">do_not_disturb_on</i>
-                    <i className="large material-icons">do_not_disturb_on</i>
-                    <i className="large material-icons">do_not_disturb_on</i>
-                </div> 
+                <div className="item-container">
+                <h1>OOPS...</h1>
+                <img src="images/support.webp" alt=""/>
+                <p>We all have issues. If you need help solving a problem with connecting to our site or using any of our great components, don't hesitate to contact us.</p>
+                <span id="email"><a href="mailto:support-general@ebuy.com">EMAIL US</a></span>
+                </div>
             </main>
         )
     }

@@ -14,7 +14,6 @@ class Item extends Component{
     }
 
     componentDidMount(){
-        console.log(this.props.match.params.id)
         const gid = this.props.match.params.id;
         const itemResponse = axios.get(`${window.apiHost}/items/${gid}`);
         itemResponse.then((response)=>{
@@ -30,25 +29,30 @@ class Item extends Component{
     componentWillReceiveProps(newProps){
         // console.log(newProps)
         if (newProps.cart.length !== this.props.cart.length){
-            this.props.history.push('/?added=item')
+            this.props.history.push('/?item=added')
         }
     }
 
     addToCart = ()=>{
-        console.log(this.props.auth.token)
-        const token = this.props.auth.token
-        this.props.updateCart(
-            token,
-            this.state.item.id
-        )
+        // console.log(this.props.auth);
+        if(this.props.auth.token === undefined){
+            // if the user has no token... they should not be here. Goodbye.
+            this.props.history.push('/login')
+        }else{ 
+            const token = this.props.auth.token
+            this.props.updateCart(
+                token,
+                this.state.item.id
+            )
+        }
     }
 
     render(){
-        console.log(this.state)
         let image = '';
         if (this.state.item.picture){
             image = this.state.item.picture
         }
+        let quantity=Math.floor(Math.random()*6)
 
         return(
             <div className="item-container">
@@ -66,7 +70,7 @@ class Item extends Component{
                         <div className="row">
                             <div className="col s1">
                                 {/* <span>Qty: {this.state.item.quantity}</span> */}
-                                <span>Qty: 0</span>
+                                <span>Qty in stock: {quantity}</span>
                             </div>
                             <div className="col s8">
                                 <input type="text" name="quantity"/>

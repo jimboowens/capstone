@@ -13,7 +13,7 @@ class Content extends Component{
     componentDidMount(){
         const itemsPromise = axios.get(`${window.apiHost}/items/getHome`)
         itemsPromise.then((response)=>{
-            console.log(response.data)
+            // console.log(response.data)
             const items = response.data
             this.setState({
                 items,

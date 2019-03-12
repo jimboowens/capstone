@@ -19,7 +19,7 @@ class Login extends Component{
         // console.log(newProps)
         if (newProps.auth.msg === "user logged in"){
             // console.log(this.props.history)
-            this.props.history.push('/')
+            this.props.history.push('/?loggedIn')
         }else if (newProps.auth.msg === "bad password"|| newProps.auth.msg==="bad romance"){
             this.setState({
                 showAlert:true,
@@ -64,9 +64,9 @@ class Login extends Component{
                             <input className='validate' type='password' name='password' id='password' />
                             <label htmlFor='password'>Enter your password</label>
                         </div>
-                        <label>
+                        {/* <label>
                             <Link className='red-text' to='/forgotPassword'><b>Forgot Password?</b></Link>
-                        </label>
+                        </label> */}
                     </div>
                     <br />
                     <center>
@@ -89,6 +89,7 @@ class Login extends Component{
 function mapStateToProps(state){
     return({
         auth:state.auth,
+        cart:state.cart,
     })
 }
 

@@ -1,6 +1,7 @@
 .home{
     border: 1px solid cyan;
 }
+
 .home img {
     width:100%;
 }
@@ -25,5 +26,33 @@
 }
 
 .item-container{
-    background-color: rgba(21,21,21,.4);
+    background-color: rgba(73, 114, 109, 0.8);
+    padding-top:2vh;
+    color: #eee;
 }
+
+.item-container img, h1,h2,h3,h4,h5,h6,p,#email{
+    display:block;
+    margin-top:35px;
+    margin-left:auto;
+    margin-right:auto;
+    /* width:30vw; */
+    border-radius: 8px;
+    text-align:center;
+    text-decoration: none;
+}
+
+.logo{
+    border-radius:2px;
+    height:70px;
+}
+
+.finePrint{
+    font-size: 9px;
+}
+
+.carousel-container{
+    max-height:770px;
+    overflow:hidden;
+}
+

@@ -8,16 +8,19 @@ class Carousel extends Component{
         const settings = {
 			dots: true,
 			infinite: true,
-			speed: 900,
+			speed: 1900,
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			autoplay: true
+            autoplay: true,
+            maxHeight:600
 		}
         return(
             <Slider {...settings}>
-                <div className="slick-image"><img src="images/homepage1_1.jpg" alt=""/></div>
-                <div className="slick-image"><img src="images/homepage1_2.jpg" alt=""/></div>
-                <div className="slick-image"><img src="images/homepage1_3.jpg" alt=""/></div>
+                <div className="slick-image carousel-container"><img src="images/slides/backsplash3.jpg" alt=""/></div>
+                <div className="slick-image carousel-container"><img src="images/slides/backsplash1.jpg" alt=""/></div>
+                <div className="slick-image carousel-container"><img src="images/slides/backsplash2.jpg" alt=""/></div>
+                <div className="slick-image carousel-container"><img src="http://www.hdnicewallpapers.com/Walls/Big/House%20and%20Bungalow/Beautiful_Wooden_Kitchen_Home_Furniture_HD_Images.jpg" alt=""/></div>
+
             </Slider>
         )
     }

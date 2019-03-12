@@ -10,6 +10,14 @@ class Favorites extends Component{
         }
     }
 
+    componentDidMount(){
+		// console.log(this.props.auth);
+		if(this.props.auth.token === undefined){
+			// if the user has no token... they should not be here. Goodbye.
+			this.props.history.push('/login')
+        }
+	}
+
     render(){
         return(
        <div>Sanity Check</div>

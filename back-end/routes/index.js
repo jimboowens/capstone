@@ -99,6 +99,7 @@ router.post('/login',(req,res)=>{
   // get the row with this username
   const selectUserQuery = `select * from users where email = $1`
   db.query(selectUserQuery,[email]).then((results)=>{
+    const uid =results[0].id
     if(results.length === 0){
       res.json({msg:'bad romance'})
     }else{
@@ -106,16 +107,15 @@ router.post('/login',(req,res)=>{
       const username = results[0].username
       const adminToken = results[0].admintoken
       if (checkHash){
-        // match! create a new token
         const token = randToken.uid(50)
         const updateTokenQuery = `update users set token = $1 where email = $2`
         db.query(updateTokenQuery,[token, email]).catch((err)=>{if (err) throw err})
-        res.json({
-          msg:"user logged in",
-          token,
-          username,
-          adminToken,
-        })
+          res.json({
+            msg:"user logged in",
+            token,
+            username,
+            adminToken,
+          })
       }else {
         res.json({
           msg:"bad password"
@@ -125,10 +125,6 @@ router.post('/login',(req,res)=>{
   }).catch((err)=> {if(err)throw err})
 })
 
-router.post('/stripe',(req,res)=>{
-  console.log(req.body)
-  res.json(req.body)
-})
 
 
 
