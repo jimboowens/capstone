@@ -2,9 +2,35 @@
  - - - -
 ##This is an eCommerce website, utilizing the following
  - - - -
+
+- - - -
+
 # Back-end
  - - - -
  
+<details>
+ <summary>Back-end</summary>
+ <p>node.js</p>
+ <p>Express</p>
+ <p>PostgreSQL</p>
+ <p>Postico</p>
+ <p>PostMan</p>
+</details>
+
+# Front-end
+ - - - -
+ <details>
+ <summary>Front-End</summary>
+  <p>JavaScript</p>
+  <p>React</p>
+  <p>Redux</p>
+  <p>CSS</p>
+  <p>MaterializeCSS</p>
+  <p>HTML</p>
+ </details>
+
+ - - - -
+ <details>
   * NodeJS
     * Express
     * Cross-Origin Compatibility
@@ -40,13 +66,4 @@
    * Bind Action Creators
    * Map State to Props
    * Map Dispatch to Props
-- - - -
-
-<details>
- <summary>Front-end</summary>
- <p>node.js</p>
- <p>Express</p>
- <p>PostgreSQL</p>
- <p>Postico</p>
- <p>PostMan</p>
-</details>
+   </details>
