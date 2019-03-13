@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import axios from 'axios'
 import ItemCard from '../utility/ItemCard'
+import searchAction from '../../actions/searchAction'
 
 class SearchResults extends Component{
     constructor(){
@@ -68,7 +69,7 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatcher){
     return bindActionCreators({
-
+        searchAction
     },dispatcher)
 }
 
