@@ -29,7 +29,6 @@
 
  - - - -
  <details>
- - - - -
  
  * Back-End
    * NodeJS
@@ -45,7 +44,6 @@
    * PostgreSQL
      * Postico
      * PostMan
- - - - -
  * Front-End
    * JavaScript
     * ReactJS
