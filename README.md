@@ -35,13 +35,13 @@
    * PostMan 
 * Front-End
  * JavaScript
-  * ReactJS
-   * Create-React-App
-   * node_modules
-   * React-Router-Dom
-   * Link
-   * Router-Dom
-   * Component
+   * ReactJS
+    * Create-React-App
+    * node_modules
+    * React-Router-Dom
+    * Link
+    * Router-Dom
+    * Component
  * SweetAlert
  * CSS
   * MaterializeCSS
@@ -50,11 +50,11 @@
  * Stripe Card Payment Method
  * Simplifica Imported Font
  * Redux
-  * Login tokens
-  * Connect
-  * Bind Action Creators
-  * Map State to Props
-  * Map Dispatch to Props
+   * Login tokens
+   * Connect
+   * Bind Action Creators
+   * Map State to Props
+   * Map Dispatch to Props
 </details>
    
 # Summary
