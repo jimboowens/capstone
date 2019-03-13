@@ -2,7 +2,7 @@
  - - - -
 ##This is an eCommerce website, utilizing the following
  - - - -
-* Back-end
+# Back-end
  - - - -
   * NodeJS
     * Express
