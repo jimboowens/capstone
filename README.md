@@ -65,11 +65,11 @@
    $ express back-end express
    $ create-react-app front-end
    ```
-When I had set the back and front end servers up and run the sanity checks to make sure everything was set up, I started making a wireframe of what I wanted to display to the consumer. While the majority of our time in training at DigitalCrafts was spent utilizing BootStrap, I was not a big fan. Personally, I far prefer materialize to BootStrap, so I chose to move forward with that as my main method of styling. While I did make a few files for more nuanced styles in secondary pages, the heavy lifting was done with materialize. Reading through their documentation was very helpful, and personalizing the navbars, forms, and sections (<html>div's</html>) was straightforward and very clean.     
+When I had set the back and front end servers up and run the sanity checks to make sure everything was set up, I started making a wireframe of what I wanted to display to the consumer. While the majority of our time in training at DigitalCrafts was spent utilizing BootStrap, I was not a big fan. Personally, I far prefer materialize to BootStrap, so I chose to move forward with that as my main method of styling. While I did make a few files for more nuanced styles in secondary pages, the heavy lifting was done with materialize. Reading through their documentation was very helpful, and personalizing the navbars, forms, and sections (`<div>`) was straightforward and very clean.     
    
 # .config 
 
-The JavaScript file for my '.config' file got more complex as we went on; connecting us to the Database in PostgreSQL and Passport had secrets and keys that were important not to be publicly accessible. Although Passport was not able to be implemented in this exercise because of Chrome web server security protocol, I still have the information in the site for when I am able to serve the site on one port versus the two (one for my Express Server, and the other for my React App).Here is an example of what my '.config' file looked like:
+The JavaScript file for my `.config` file got more complex as we went on; connecting us to the Database in PostgreSQL and Passport had secrets and keys that were important not to be publicly accessible. Although Passport was not able to be implemented in this exercise because of Chrome web server security protocol, I still have the information in the site for when I am able to serve the site on one port versus the two (one for my Express Server, and the other for my React App).Here is an example of what my `.config` file looked like:
  
  ```javascript
  module.exports = {
