@@ -56,7 +56,7 @@
     * Map State to Props
     * Map Dispatch to Props
    </details>
-    - - - -
+   
 # Summary
    
    This was an immense learning exercise for me. I anjoyed debugging and working through the user experience. As more components were added and reducers became more numerous, I began to see the effectiveness and elegance of React with Redux. As sites get larger and more complex, more and more information needs to be stored in the database to provide a good user experience. 
