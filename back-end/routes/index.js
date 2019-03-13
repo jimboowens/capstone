@@ -14,7 +14,7 @@ router.get('/auth/github/callback',passport.authenticate('github'),(req,res)=>{
   // console.log(pgPromise);
   pgPromise.then((data)=>{
     if(data.length === 0){
-      console.log("Not Found")
+      // console.log("Not Found")
       const insertQuery = `INSERT into users (username) VALUES ($1) returning id`;
       db.query(insertQuery,[req.user.username]).then((id)=>{
         const payload = {id, username: req.user.username}
@@ -62,7 +62,11 @@ router.post('/search', (req,res)=>{
         if (results2.length>0){
           res.json(results2)
         }else{
-          res.json({msg:"no results"})
+          const searchItemsQuery=`select * from items order by random() limit 4`
+          db.query(searchItemsQuery).then((results3)=>{
+            res.json(results3)
+          }).catch((err3)=>{throw err3})
+          
         }
       }).catch((err2)=>{throw err2})
     }
@@ -140,3 +144,6 @@ router.post('/login',(req,res)=>{
 
 
 module.exports = router;
+
+
+// res.json({msg:"no results"})

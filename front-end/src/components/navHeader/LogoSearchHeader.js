@@ -12,12 +12,8 @@ class LogoSearchHeader extends Component{
         }
     }
 
-    componentWillReceiveProps(newProps){
-        console.log(this.props)
-        console.log(newProps)
-        console.log("component received new props")
+    componentWillReceiveProps(){
         this.props.history.push('/searchResults')
-
     }
 
     searchSubmit=(event)=>{
@@ -30,8 +26,7 @@ class LogoSearchHeader extends Component{
     }
 
     render(){
-        console.log(this.state.searchResults)
-
+        // console.log(this.state.searchResults)
         return(
             <div className="logo-search-header">
                 <div className="right-align">

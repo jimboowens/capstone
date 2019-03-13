@@ -38,9 +38,22 @@ class SearchResults extends Component{
             return <ItemCard key={i} item={item}/>
         })
         return(
-            <div className="row">
+            <div className="row item-container">
                 <div className="col s12">
-                {itemCards}
+                    <div>
+                        <h4>Here are your search Results:</h4>
+                    </div>
+                    <div>
+                        {itemCards}
+                    </div>
+                    <div className='col s12'>
+                        <p>
+                            Our search algorithm combs through our database of items currently available for sale, and first tries to find items with names similar or matching your request. 
+                            If there are none close enough to your request, we return items more periperally related to what you might be wanting to find. If still nothing meets our criteria, 
+                            our still-in-beta AI offers up possible suggestions we hope you will like. If there is nothing here that piques your interest, please try another entry, or contact 
+                            us and we will see what we can do to uncover what you need.
+                        </p>
+                    </div>
                 </div>
             </div>
         )
