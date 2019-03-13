@@ -4,6 +4,7 @@
  - - - -
 # Back-end
  - - - -
+ 
   * NodeJS
     * Express
     * Cross-Origin Compatibility
@@ -19,7 +20,7 @@
     * PostMan
 # Front-end
  - - - -
-  
+ 
   * JavaScript
    * ReactJS
     * Create-React-App
@@ -39,5 +40,13 @@
    * Bind Action Creators
    * Map State to Props
    * Map Dispatch to Props
+- - - -
 
-
+<details>
+ <summary>Front-end</summary>
+ <p>node.js</p>
+ <p>Express</p>
+ <p>PostgreSQL</p>
+ <p>Postico</p>
+ <p>PostMan</p>
+</details>
