@@ -30,7 +30,8 @@
  </details>
 
  - - - -
- <details>
+ <More in-depth details of Full Stack>
+ ----
   * NodeJS
     * Express
     * Cross-Origin Compatibility
