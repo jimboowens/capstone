@@ -36,10 +36,15 @@ class Deals extends Component{
             return <ItemCard key={i} item={item}/>
         })
         return(
-            <div className="row">
+            <div className="row item-container">
                 <div className="col s12">
+                <h1>Get These Deals Before they sell out!</h1>
                 {itemCards}
                 </div>
+                <p>
+                    These items are listed as on sale by the vender that posted them, and will be available until such time as the vender no longer has any inventory for the item, or they no longer wish to sell it at a discounted rate.
+                </p>
+                <p className='finePrint'>On sale functionality is coming soon!</p>
             </div>
         )
     }
