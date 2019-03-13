@@ -16,10 +16,10 @@ class Post extends Component{
     }
 
     componentDidMount(){
-		// console.log(this.props.auth);
-		if(this.props.auth.token === undefined){
+		console.log(this.props.auth);
+		if(this.props.auth.adminToken !== "MERCHANT"){
 			// if the user has no token... they should not be here. Goodbye.
-			this.props.history.push('/login')
+			this.props.history.push('/?post=failed')
 		}
 	}
 
@@ -130,15 +130,15 @@ function mapDispatchToProps(dispatcher){
 
 export default connect(mapStateToProps,mapDispatchToProps)(Post);
 
-{/* <div class="input-field col s12">
-    <select>
-      <option value="" disabled selected>Choose your option</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
-    </select>
-    <label>Materialize Select</label>
-  </div> */}
+//  <div class="input-field col s12">
+//     <select>
+//       <option value="" disabled selected>Choose your option</option>
+//       <option value="1">Option 1</option>
+//       <option value="2">Option 2</option>
+//       <option value="3">Option 3</option>
+//     </select>
+//     <label>Materialize Select</label>
+//   </div> 
 
 //   <div class="input-field col s12 m6">
 //   <select class="icons">

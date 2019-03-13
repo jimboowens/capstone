@@ -3,8 +3,6 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import {bindActionCreators} from 'redux';
 import authAction from '../../actions/authAction'
-import SweetAlert from 'sweetalert-react';
-import 'sweetalert/dist/sweetalert.css'
 
 class Register extends Component{
     constructor(){
@@ -19,21 +17,11 @@ class Register extends Component{
     componentWillReceiveProps(newProps){
         // console.log(newProps);
             if(newProps.auth.msg === 'user exists'){
-                this.setState({
-                    showAlert:true,
-                    title:"Registration Error",
-                    text:"Email is already registered. Login or chooose a different email.",
-                    onConfirm:() => this.setState({ showAlert: false }),
-                })
+                this.props.history.push('/?user=exists')
             }else if(newProps.auth.adminToken === "requested"){
-                this.setState({
-                    showAlert:true,
-                    title:"Merchant Request Received and Logged",
-                    text:"You have requested to be listed as a merchant. You will be notified via the given email upon approval.",
-                    onConfirm:()=>this.setState({showAlert:false}),
-                })
+                this.props.history.push('/?admin=requested')
             }else if (newProps.auth.msg ==="user added"){
-                this.props.history.push('/')
+                this.props.history.push('/?registerSuccess')
             }
     
     }
@@ -55,18 +43,6 @@ class Register extends Component{
     render(){
         return(
         <main>
-            <SweetAlert
-               show={this.state.showAlert}
-               title={this.state.title}
-               text={this.state.text}
-               onConfirm={this.state.onConfirm}
-           />
-           <SweetAlert
-               show={this.state.adminRequest}
-               title={this.state.title}
-               text={this.state.text}
-               onConfirm={this.state.onConfirm}
-           />
             <center>
             <div className="container">
                 <div className="z-depth-1 teal darken-3 row register">
@@ -91,9 +67,6 @@ class Register extends Component{
                             <input className='validate' type='password' name='password' id='password' />
                             <label htmlFor='password'>Please enter your password</label>
                         </div>
-                        <label>
-                            <Link className='teal-text' to='/forgotPassword'><b>Forgot Password?</b></Link>
-                        </label>
                     </div>
                     <p><label>
                         <input id="indeterminate-checkbox"className="teal-text" type="checkbox" />
