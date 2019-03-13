@@ -69,6 +69,9 @@ As a result of Express and React being so widely implemented, they come with som
 
 ![image_not_found](https://raw.githubusercontent.com/jimboowens/capstone/master/front-end/public/images/readme/post_form_image.png)
    
+Next, I started working through the cart functionality. I added a `cart.js` file into the back end to be able to track cart actions and purchases. I worked through adding items to the cart via my `cartAction`, and worked and inner join command in PostgreSQL to populate the cart for an arbitrary amount of users. Then, on the `getCart` file, I used a component to map through the returned array and renders it to the DOM. The difficulty was getting the `delete` button to work! 
+
+
 # .config 
 
 The JavaScript file for my `.config` file got more complex as we went on; connecting us to the Database in PostgreSQL and Passport had secrets and keys that were important not to be publicly accessible. Although Passport was not able to be implemented in this exercise because of Chrome web server security protocol, I still have the information in the site for when I am able to serve the site on one port versus the two (one for my Express Server, and the other for my React App).Here is an example of what my `.config` file looked like:
