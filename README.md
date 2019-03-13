@@ -6,24 +6,38 @@
  - - - -
   * NodeJS
     * Express
+    * Cross-Origin Compatibility
     * npm
       * node_modules
         * Helmet
         * bCrypt
+        * Cookie Parser
+        * Passport
+        * Express Session
   * PostgreSQL
     * Postico
     * PostMan
 * Front-end
  - - - -
-  * ReactJS
+  
+  * JavaScript
+   * ReactJS
     * Create-React-App
     * node_modules
-  * JavaScript
+    * React-Router-Dom
+    * Link
+    * Router-Dom
+    * Component
   * CSS
     * MaterializeCSS
+    * Custom CSS
   * HTML
   * Simplifica Imported Font
   * Redux
-
+   * Login tokens
+   * Connect
+   * Bind Action Creators
+   * Map State to Props
+   * Map Dispatch to Props
 
 
