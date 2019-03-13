@@ -34,7 +34,7 @@
    * Postico
    * PostMan 
 * Front-End
- * JavaScript
+  * JavaScript
    * ReactJS
     * Create-React-App
     * node_modules
