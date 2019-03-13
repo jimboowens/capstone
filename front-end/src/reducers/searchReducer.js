@@ -5,8 +5,8 @@
 // if you want to change me, let me know by an action.type
 
 export default (state=[],action)=>{
-    console.log(action.type)
-    console.log(action.payload||"no data")
+    // console.log(action.type)
+    // console.log(action.payload||"no data")
     // signature takes state and action (signature is the stuff passed into a function set as a parameter)
     switch (action.type) {
         case "SEARCH_ACTION":
