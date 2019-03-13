@@ -4,7 +4,6 @@
  - - - -
 
 # Back-end
- - - - -
  
  * Node.js
  * Express
@@ -12,7 +11,6 @@
  * Postico
 
 # Front-end
- - - - -
  
  * JavaScript
  * React
