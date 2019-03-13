@@ -43,17 +43,17 @@
     * Router-Dom
     * Component
     * Axios
- * SweetAlert
-  * MaterializeCSS
- * HTML
- * Stripe Card Payment Method
- * Simplifica Imported Font
- * Redux
-   * Login tokens
-   * Connect
-   * Bind Action Creators
-   * Map State to Props
-   * Map Dispatch to Props
+  * SweetAlert
+   * MaterializeCSS
+  * HTML
+  * Stripe Card Payment Method
+  * Simplifica Imported Font
+  * Redux
+    * Login tokens
+    * Connect
+    * Bind Action Creators
+    * Map State to Props
+    * Map Dispatch to Props
 </details>
    
 # Summary
