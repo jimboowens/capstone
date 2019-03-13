@@ -6,19 +6,19 @@
 # Back-end
  - - - -
  
- Node.js
- Express
- PostgreSQL
- Postico
+ * Node.js
+ * Express
+ * PostgreSQL
+ * Postico
 
 # Front-end
  - - - -
  
- JavaScript
- React
- Redux
- MaterializeCSS
- HTML
+ * JavaScript
+ * React
+ * Redux
+ * MaterializeCSS
+ * HTML
 
  - - - -
  <details>
