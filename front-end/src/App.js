@@ -14,6 +14,7 @@ import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import Careers from './components/pages/Careers';
 import Support from './components/pages/Support';
+import SearchResults from './components/pages/SearchResults';
 import './App.css'
 
 class App extends Component {
@@ -21,7 +22,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Headers />
+        <Route path="/" component={Headers}/>
           <div className="container">
             <Route exact path="/" component={Home}/>
             <Route exact path="/login" component={Login}/>
@@ -37,6 +38,7 @@ class App extends Component {
             <Route exact path="/contact" component={Contact}/>
             <Route exact path="/careers" component={Careers}/>
             <Route exact path="/support" component={Support}/>
+            <Route exact path="/searchResults" component={SearchResults}/>
           </div>
         </div>
       </Router>

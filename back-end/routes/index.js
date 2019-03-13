@@ -50,11 +50,22 @@ function sendToken(res,token){
 router.post('/search', (req,res)=>{
   console.log(req.body.searchCriteria)
   const searchCriteria=req.body.searchCriteria;
-  const searchQuery = `select * from items where name like $1`
+  const searchQuery = `select * from items where name like \'%$1#%\'`
   db.query(searchQuery,[searchCriteria]).then((results)=>{
-    console.log("results")
     console.log(results)
-    res.json(results)
+    if (results.length>0){
+      res.json(results)
+    }else{
+      const searchQueryExt = `select * from items where type like \'%$1#%\'`
+      db.query(searchQueryExt,[searchCriteria]).then((results2)=>{
+        console.log(results2)
+        if (results2.length>0){
+          res.json(results2)
+        }else{
+          res.json({msg:"no results"})
+        }
+      }).catch((err2)=>{throw err2})
+    }
   }).catch((err)=>{if(err) throw err})
 })
 

@@ -8,19 +8,21 @@ class LogoSearchHeader extends Component{
         super()
         this.state = {
             msg:"",
-            searchCriteria:"",
-            searchResults:"",
+            searchResults:[],
         }
     }
 
     componentWillReceiveProps(newProps){
-        console.log("component received new props")
+        console.log(this.props)
         console.log(newProps)
+        console.log("component received new props")
+        this.props.history.push('/searchResults')
+
     }
 
     searchSubmit=(event)=>{
         event.preventDefault()
-        console.log(event.target[0].value)
+        // console.log(event.target[0].value)
         const searchCriteria = event.target[0].value
         this.props.searchAction({
             searchCriteria,
@@ -28,21 +30,24 @@ class LogoSearchHeader extends Component{
     }
 
     render(){
+        console.log(this.state.searchResults)
+
         return(
             <div className="logo-search-header">
                 <div className="right-align">
                     <form onSubmit={this.searchSubmit}>
-                        <input type="text" placeholder="Search items for sale" />
+                        <input type="text" placeholder="Search items for sale"  />
                     </form>
                 </div>            
             </div>
         )
-        }
+    }
 }
 
 function mapStateToProps(state){
     return({
-        search:state.searchCriteria
+        auth:state.auth,
+        searchResults:state.searchResults
     })
 }
 
@@ -54,3 +59,5 @@ function mapDispatchToProps(dispatcher){
 
 export default connect(mapStateToProps,mapDispatchToProps)(LogoSearchHeader)
 // export default LogoSearchHeader;
+
+// for searchresults, need state.auth to get the array, and can copy and paste the item and itemCard thing

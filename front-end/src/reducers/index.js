@@ -5,10 +5,12 @@ import {combineReducers} from 'redux';
 // 2. Call combineReducers method an pass it an object
 import authReducer from './authReducer';
 import cartReducer from './cartReducer';
+import searchReducer from './searchReducer';
 
 const rootReducer= combineReducers({
     auth:authReducer,
     cart:cartReducer,
+    searchResults:searchReducer,
 })
 // 3. Each key/property of the object, will be a single function that returns a piece of application/redux state
 
