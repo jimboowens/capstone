@@ -16,9 +16,9 @@ class Post extends Component{
     }
 
     componentDidMount(){
-		console.log(this.props.auth);
+		console.log(this.props.auth)
 		if(this.props.auth.adminToken !== "MERCHANT"){
-			// if the user has no token... they should not be here. Goodbye.
+			// if the user has no token... they should not be here. get gone.
 			this.props.history.push('/?post=failed')
 		}
 	}
@@ -58,7 +58,7 @@ class Post extends Component{
                 onConfirm={() => this.setState({ showAlert: false })}
                 />
                 <center>
-                <div className="container">
+                <div className="container-item">
                     <div className="z-depth-1 teal darken-3 row login">
                     <form className="col s12" onSubmit={this.handlePost} encType="multipart/form-data">
                         <div className='row'>
