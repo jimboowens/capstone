@@ -6,26 +6,19 @@
 # Back-end
  - - - -
  
-<details>
- <summary>Back-end</summary>
- <p>node.js</p>
- <p>Express</p>
- <p>PostgreSQL</p>
- <p>Postico</p>
- <p>PostMan</p>
-</details>
+ Node.js
+ Express
+ PostgreSQL
+ Postico
 
 # Front-end
  - - - -
- <details>
- <summary>Front-End</summary>
-  <p>JavaScript</p>
-  <p>React</p>
-  <p>Redux</p>
-  <p>CSS</p>
-  <p>MaterializeCSS</p>
-  <p>HTML</p>
- </details>
+ 
+ JavaScript
+ React
+ Redux
+ MaterializeCSS
+ HTML
 
  - - - -
  <details>
