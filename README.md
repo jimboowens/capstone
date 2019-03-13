@@ -30,7 +30,7 @@
  </details>
 
  - - - -
- <More in-depth details of Full Stack>
+ <details>
  ----
   * NodeJS
     * Express
@@ -67,4 +67,4 @@
    * Bind Action Creators
    * Map State to Props
    * Map Dispatch to Props
-   </More in-depth details of Full Stack>
+   </details>
