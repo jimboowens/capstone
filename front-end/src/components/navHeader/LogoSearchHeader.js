@@ -12,11 +12,13 @@ class LogoSearchHeader extends Component{
         }
     }
 
-    componentWillReceiveProps(){
+    componentWillReceiveProps(newProps){
+        console.log(newProps)
         this.props.history.push('/searchResults')
     }
 
     searchSubmit=(event)=>{
+        
         event.preventDefault()
         // console.log(event.target[0].value)
         const searchCriteria = event.target[0].value
@@ -41,7 +43,6 @@ class LogoSearchHeader extends Component{
 
 function mapStateToProps(state){
     return({
-        auth:state.auth,
         searchResults:state.searchResults
     })
 }

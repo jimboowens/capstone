@@ -8,7 +8,7 @@ var upload = multer({ dest: 'public/images' })
 
 
 router.get('/getHome',(req,res)=>{
-    // console.log(req.body)
+    console.log(req.body)
     // res.json('items')
     const gameQuery = `select * from items where picture is not null order by random() limit 4`
     db.query(gameQuery).then((results)=>{
