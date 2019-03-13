@@ -1,6 +1,7 @@
 html{
     background-color:#004d40;
     overflow:auto;
+    /* overflow:hidden; */
     height:100vh;
     font-family: 'Simplifica';
     letter-spacing:1.5px
@@ -13,7 +14,7 @@ html{
 
 body{
     /* margin-top:30px; */
-
+    /* overflow: auto; */
     background-image: linear-gradient(#b9bebe00,#004d40), url('/images/background_images/main_background.png');
     display:fixed;
     background-size:cover;

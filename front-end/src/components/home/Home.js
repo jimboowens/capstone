@@ -22,7 +22,8 @@ class Home extends Component{
         switch(this.props.location.search){
             case "?item=added": return this.setState({showAlert:true,title:"Item Added!",text:text})
             case "?item=posted": return this.setState({showAlert:true,title:"Item Added!",text:text})
-            case "?loggedIn": return this.setState({showAlert:true,title:"Your session is active.", text:"Please review our site. To purchase items, add them to your cart and then proceed to checkout!",}) 
+            case "?loggedIn": return this.setState({showAlert:true,title:"Your session is now active.", text:"Please review our site. To purchase items, add them to your cart and then proceed to checkout!",}) 
+            case "?loggedOut": return this.setState({showAlert:true,title:"Your session is now inactive.", text:"Please review our site. To purchase items, log in, and then add them to your cart and then proceed to checkout!",}) 
             case "?thankYou": return this.setState({showAlert:true,title:"Your have successfully purchased the items in your cart", text:"Please continue to peruse our site. To purchase more items, add them to your cart and then proceed to checkout!",}) 
             case "?post=failed": return this.setState({showAlert:true,title:"Post functionality is accessible to merchants only.", text:"Please contact us if you are interested in becoming a merchant, and we will follow up by contacting you via the provided email.",}) 
             case "?user=exists": return this.setState({showAlert:true,title:"The user email you submitted is already registered. Please provide another email, or login with current email.", text:"If you feel you reached this alert in error, please email our support team. Feel free to contact us if you are interested in becoming a merchant, and we will follow up by contacting you via the provided email.",}) 
