@@ -43,9 +43,7 @@
     * Router-Dom
     * Component
  * SweetAlert
- * CSS
   * MaterializeCSS
-  * Custom CSS
  * HTML
  * Stripe Card Payment Method
  * Simplifica Imported Font
