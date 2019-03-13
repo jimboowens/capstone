@@ -3,8 +3,6 @@
 ## This is an eCommerce website, utilizing the following
  - - - -
 
-- - - -
-
 # Back-end
  - - - -
  
@@ -31,7 +29,7 @@
 
  - - - -
  <details>
- ----
+ - - - -
   * NodeJS
     * Express
     * Cross-Origin Compatibility
