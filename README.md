@@ -21,30 +21,30 @@
  
 * Back-End
   * NodeJS
-   * Express
-   * Cross-Origin Compatibility
-   * npm
-    * node_modules
-     * Helmet
-     * bCrypt
-     * Cookie Parser
-     * Passport
-     * Express Session
+    * Express
+    * Cross-Origin Compatibility
+    * npm
+      * node_modules
+        * Helmet
+        * bCrypt
+        * Cookie Parser
+        * Passport
+        * Express Session
   * PostgreSQL
-   * Postico
-   * PostMan 
+    * Postico
+    * PostMan 
 * Front-End
   * JavaScript
    * ReactJS
-    * Create-React-App
-    * node_modules
-    * React-Router-Dom
-    * Link
-    * Router-Dom
-    * Component
-    * Axios
+     * Create-React-App
+     * node_modules
+     * React-Router-Dom
+     * Link
+     * Router-Dom
+     * Component
+     * Axios
   * SweetAlert
-   * MaterializeCSS
+  * MaterializeCSS
   * HTML
   * Stripe Card Payment Method
   * Simplifica Imported Font
