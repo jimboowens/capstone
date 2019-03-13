@@ -42,6 +42,7 @@
     * Link
     * Router-Dom
     * Component
+    * Axios
  * SweetAlert
   * MaterializeCSS
  * HTML
@@ -58,6 +59,13 @@
 # Summary
    
    This was an immense learning exercise for me. I anjoyed debugging and working through the user experience. As more components were added and reducers became more numerous, I began to see the effectiveness and elegance of React with Redux. As sites get larger and more complex, more and more information needs to be stored in the database to provide a good user experience. 
+   
+   I started from scratch with an Express Back-end, initialized with Express. Then, I went to create-react-app and initialized the front-end folder (changing directories, installing node_modules, setting up package-lock.json and package-json appended): 
+   ```bash
+   $ express back-end express
+   $ create-react-app front-end
+   ```
+   
 
 # .config 
 
