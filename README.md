@@ -2,14 +2,14 @@
 ## This is an eCommerce website, utilizing the following
  - - - -
 
-# Back-end
+## Back-end
  
  * Node.js
  * Express
  * PostgreSQL
  * Postico
 
-# Front-end
+## Front-end
  
  * JavaScript
  * React
