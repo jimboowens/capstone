@@ -4,7 +4,7 @@ import {bindActionCreators} from 'redux';
 import axios from 'axios'
 import ItemCard from '../utility/ItemCard'
 
-class Deals extends Component{
+class Favorites extends Component{
     constructor(){
         super()
         this.state={
@@ -38,11 +38,11 @@ class Deals extends Component{
         return(
             <div className="row item-container">
                 <div className="col s12">
-                <h1>Get These Deals Before they sell out!</h1>
+                <h1>These are your favorites:</h1>
                 {itemCards}
                 </div>
                 <p>
-                    These items are listed as on sale by the vender that posted them, and will be available until such time as the vender no longer has any inventory for the item, or they no longer wish to sell it at a discounted rate.
+                    These items are listed as favorited by you.  will be available until such time as the vender no longer has any inventory for the item, or they no longer wish to sell it at a discounted rate.
                 </p>
                 <p className='finePrint'>On sale functionality is coming soon!</p>
             </div>
@@ -62,7 +62,7 @@ function mapDispatchToProps(dispatcher){
     },dispatcher)
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Deals);
+export default connect(mapStateToProps,mapDispatchToProps)(Favorites);
 
 
 
