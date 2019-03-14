@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import searchAction from '../../actions/searchAction'
+import './Nav.css'
 
 class LogoSearchHeader extends Component{
     constructor(){
@@ -33,7 +34,7 @@ class LogoSearchHeader extends Component{
             <div className="logo-search-header">
                 <div className="right-align">
                     <form onSubmit={this.searchSubmit}>
-                        <input type="text" placeholder="Search items for sale"  />
+                        <input className="searchField"type="text" placeholder="Search items for sale"  />
                     </form>
                 </div>            
             </div>

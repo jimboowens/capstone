@@ -62,13 +62,13 @@ Postico | HTML
 </details>
 
  - - - - 
-# Summary
+## Summary
    
    This was an immense learning exercise for me. I enjoyed debugging and working through the user experience. As more components were added and reducers became more numerous, I began to see the effectiveness and elegance of React with Redux. As sites get larger and more complex, more and more information needs to be stored in the database to provide a good user experience. The idea came from the problem of sales and notifications of queries and purchases from eBay, amazon, and other eCommerce sites. The extended goal is to link merchants of this site to twillio, and if the time matches their hours of operation, they receive notifications via text and/or phone based on their preference. If not, the notifications are stored until such time as the vender is again open for business. Then, they receive the queued notifications from eBuy via their preferred method of communication. 
    
    There were some significant challenges, especially with Stripe connection (using my public apiKey for sandbox purchases), and deploying to my Amazon Web Server. The NPM run build was challenging, as well, as this was the first time I used a back-end and front-end folder. I had a back-end and front-end images file, which broke some page population until I retried and cut and pasted the front-end images into the back-end folder. Running the command line in Ubuntu was involved, as I was starting with a brand new EC2. I had to install Apache2, configure the .conf file, clone this repository, get HTTPS approval via certbot, utilize PM2 to run the site in the background, and set up the PostgreSQL database. PostgreSQL has different protocols and commands than MySQL, which I have used in the past to serve live sites. Redux also deserves honorable mention, as it is quite a challenge particularly when it comes to smaller scale websites like this one. However, as pages started to get more numerous and I began to re-use classes and functions, I saw the elegance and efficience of Redux when adding content. The search utility was a different callenge, as my database is not as large as a fully deployed website, and the categories are not as widespread. So, in the event there were no objects in my database matching the criteria, I had to return a random list of 4 items from the database to allow the page to populate. Connecting the front end to the back end was 
    
-# Step-by-step Implementation
+## Step-by-step Implementation
    I started from scratch with an Express Back-end, initialized with Express. Then, I went to create-react-app and initialized the front-end folder (changing directories, installing node_modules, setting up package-lock.json and package-json omitted): 
    ```bash
    $ express back-end express
@@ -132,7 +132,7 @@ The results are:
 ![image_not_found](https://raw.githubusercontent.com/jimboowens/capstone/master/front-end/public/images/readme/tertiary_results_image.png)
 
 
-# .config 
+## .config 
 
 The JavaScript file for my `.config` file got more complex as we went on; connecting us to the Database in PostgreSQL and Passport had secrets and keys that were important not to be publicly accessible. Although Passport was not able to be implemented in this exercise because of Chrome web server security protocol, I still have the information in the site for when I am able to serve the site on one port versus the two (one for my Express Server, and the other for my React App).Here is an example of what my `.config` file looked like:
  
