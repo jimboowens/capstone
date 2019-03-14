@@ -42,7 +42,7 @@ class Favorites extends Component{
                 {itemCards}
                 </div>
                 <p>
-                    These items are listed as favorited by you. They will be available until such time as the vender no longer has any inventory for the item, or they no longer wish to sell it at a discounted rate.
+                    These items are listed as favorited by you.  will be available until such time as the vender no longer has any inventory for the item, or they no longer wish to sell it at a discounted rate.
                 </p>
                 <p className='finePrint'>On sale functionality is coming soon!</p>
             </div>

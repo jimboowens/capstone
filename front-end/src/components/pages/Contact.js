@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
@@ -30,11 +29,11 @@ class Contact extends Component{
                     <p>
                         Your satisfaction is as important to us as it is to you. We are your first line of defense against a less than exceptional experience. 
                     </p>
-                    <span id="email"><a href="mailto:support-patron@ebuy.com">EMAIL US</a></span>
+                    <span id="email"><a href="mailto:support-patron@ebuy.com" target="blank">EMAIL US</a></span>
                     <img src="/images/jim.png" alt="" />
                     <h1>Jim Owens</h1>
                     <a className="col s3" href="https://github.com/jimboowens" target="blank"><img src="/images/github.png" alt=""/></a>
-                    <a className="col s3" href="https://www.aedin.com/in/jimcowens/" alt="" target="blank"><img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" alt=""/></a>
+                    <a className="col s3" href="https://www.linkedin.com/in/jimcowens/" alt="" target="blank"><img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" alt=""/></a>
                     <p>
                         I am a web developer, recently moved over from management at Panera. I am passionate about solving problems in creative and efficient ways, while making ergonomic and enjoyable websites. Code can be 
                         complex, and solving coding issues aren't the only problem. Making code that others can readily read and understand is critical to contributing to a part of any team. I care about my friends and family, 
