@@ -113,8 +113,8 @@ router.post('/search', (req,res)=>{
 The results are:
 
 ![image_not_found](https://raw.githubusercontent.com/jimboowens/capstone/master/front-end/public/images/readme/primary_search_results_image.png)
-![image_not_found](https://raw.githubusercontent.com/jimboowens/capstone/master/front-end/public/images/readme/secondary_search_result_image.png)
-![image_not_found](https://raw.githubusercontent.com/jimboowens/capstone/master/front-end/public/images/readme/tertiary_search_result_image.png)
+![image_not_found](https://raw.githubusercontent.com/jimboowens/capstone/master/front-end/public/images/readme/secondary_search_results_image.png)
+![image_not_found](https://raw.githubusercontent.com/jimboowens/capstone/master/front-end/public/images/readme/tertiary_search_results_image.png)
 
 
 # .config 
