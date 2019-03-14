@@ -48,29 +48,25 @@ function sendToken(res,token){
 }
 
 router.post('/search', (req,res)=>{
-  console.log(req.body.searchCriteria)
   const searchCriteria=req.body.searchCriteria;
-  const searchQuery = `select * from items where name like \'%$1#%\'`
+  const searchQuery = `SELECT * FROM items WHERE name LIKE \'%$1#%\'`
   db.query(searchQuery,[searchCriteria]).then((results)=>{
-    console.log(results)
     if (results.length>0){
       res.json(results)
     }else{
-      const searchQueryExt = `select * from items where type like \'%$1#%\'`
+      const searchQueryExt = `SELECT * FROM items WHERE type LIKE \'%$1#%\'`
       db.query(searchQueryExt,[searchCriteria]).then((results2)=>{
-        console.log(results2)
         if (results2.length>0){
           res.json(results2)
         }else{
-          const searchItemsQuery=`select * from items order by random() limit 4`
+          const searchItemsQuery=`SELECT * FROM items ORDER BY RANDOM() LIMIT 4`
           db.query(searchItemsQuery).then((results3)=>{
             res.json(results3)
           }).catch((err3)=>{throw err3})
-          
         }
       }).catch((err2)=>{throw err2})
     }
-  }).catch((err)=>{if(err) throw err})
+  }).catch((err)=>{throw err})
 })
 
 router.post('/register',(req,res)=>{
