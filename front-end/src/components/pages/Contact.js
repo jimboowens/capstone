@@ -33,8 +33,8 @@ class Contact extends Component{
                     <span id="email"><Link to="mailto:support-patron@ebuy.com">EMAIL US</Link></span>
                     <img src="/images/jim.png" alt="" />
                     <h1>Jim Owens</h1>
-                    <Link className="col s3" to="https://github.com/jimboowens"><img src="/images/github.png" alt=""/></Link>
-                    <Link className="col s3" to="https://www.linkedin.com/in/jimcowens/" alt=""><img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" alt=""/></Link>
+                    <a className="col s3" href="https://github.com/jimboowens" target="blank"><img src="/images/github.png" alt=""/></a>
+                    <a className="col s3" href="https://www.aedin.com/in/jimcowens/" alt="" target="blank"><img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" alt=""/></a>
                     <p>
                         I am a web developer, recently moved over from management at Panera. I am passionate about solving problems in creative and efficient ways, while making ergonomic and enjoyable websites. Code can be 
                         complex, and solving coding issues aren't the only problem. Making code that others can readily read and understand is critical to contributing to a part of any team. I care about my friends and family, 
