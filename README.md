@@ -4,7 +4,7 @@
 
 Back-end  | Front-end
 ------------- | -------------
-Node.js  | JavaScripe
+Node.js  | JavaScript
 Express  | React/Redux
 PostgreSQL | MaterializeCSS
 Postico | HTML
