@@ -60,7 +60,9 @@
   * Apache2
     * Server
     * Apachectl
+  * NPM
   * sites-available
+  * proxy_http
   * /var/www/capstone
   * PM2
   * PostgreSQL
