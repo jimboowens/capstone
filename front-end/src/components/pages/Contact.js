@@ -30,7 +30,7 @@ class Contact extends Component{
                     <p>
                         Your satisfaction is as important to us as it is to you. We are your first line of defense against a less than exceptional experience. 
                     </p>
-                    <span id="email"><Link to="mailto:support-patron@ebuy.com">EMAIL US</Link></span>
+                    <span id="email"><a href="mailto:support-patron@ebuy.com">EMAIL US</a></span>
                     <img src="/images/jim.png" alt="" />
                     <h1>Jim Owens</h1>
                     <a className="col s3" href="https://github.com/jimboowens" target="blank"><img src="/images/github.png" alt=""/></a>
