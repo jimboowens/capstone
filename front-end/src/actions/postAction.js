@@ -38,6 +38,7 @@ export default (formData)=>{
         completedFormData.append('files', file);
     }
     console.log('postAction is running',completedFormData)
+    console.log(completedFormData)
     const axiosPromise = axios.post(`${window.apiHost}/items/postItem`,completedFormData,config)
     return{
         type:'POST_ACTION',
