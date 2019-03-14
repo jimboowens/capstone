@@ -81,7 +81,7 @@ When the consumer is ready to check out, eBuy utilizes Stripe, which is secure a
 
 ![image_not_found](https://raw.githubusercontent.com/jimboowens/capstone/master/front-end/public/images/readme/stripe_image.png)
 
-Once I worked through the login and purchase aspects of the site, I began populating the rest of the site with active links, like about us and contact us. Another good resource I was able to implement was the search option:
+Once I worked through the login and purchase aspects of the site, I began populating the rest of the site with active links, like about us and contact us. Another good resource I was able to implement was the search option(as you will notice, I serve up four random items from the database to ensure I return some sort of array. This would be changed as the database increases in size to more tailored selections, or a no results error handler could be set up in the front end):
 
 ```javascript
 router.post('/search', (req,res)=>{
@@ -106,6 +106,7 @@ router.post('/search', (req,res)=>{
   }).catch((err)=>{throw err})
 })
 ```
+
 
 
 # .config 
