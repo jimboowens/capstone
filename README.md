@@ -2,6 +2,11 @@
 ## This is an eCommerce website, utilizing the following
  - - - -
 
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+
 ## Back-end
  
  * Node.js
