@@ -1,6 +1,6 @@
 # Capstone
+- - - - 
 ## This is an eCommerce website, utilizing the following
- - - - -
 
 Back-end  | Front-end
 ------------- | -------------
