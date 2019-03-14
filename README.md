@@ -4,23 +4,11 @@
 
 Back-end  | Front-end
 ------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
+Node.js  | JavaScripe
+Express  | React/Redux
+PostgreSQL | MaterializeCSS
+Postico | HTML
 
-## Back-end
- 
- * Node.js
- * Express
- * PostgreSQL
- * Postico
-
-## Front-end
- 
- * JavaScript
- * React
- * Redux
- * MaterializeCSS
- * HTML
 
  <details>
  
