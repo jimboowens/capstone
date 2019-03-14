@@ -70,6 +70,7 @@ As a result of Express and React being so widely implemented, they come with som
 ![image_not_found](https://raw.githubusercontent.com/jimboowens/capstone/master/front-end/public/images/readme/post_form_image.png)
    
 Next, I started working through the cart functionality. I added a `cart.js` file into the back end to be able to track cart actions and purchases. I worked through adding items to the cart via my `cartAction`, and worked and inner join command in PostgreSQL to populate the cart for an arbitrary amount of users. Then, on the `getCart` file, I used a component to map through the returned array and renders it to the DOM. The difficulty was getting the `delete` button to work! 
+![image_not_found](https://raw.githubusercontent.com/jimboowens/capstone/master/front-end/public/images/readme/cart_image.png)
 
 
 # .config 
