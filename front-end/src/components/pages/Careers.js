@@ -48,6 +48,7 @@ class Careers extends Component{
                         way. Make all our dreams come true for me and you. So this is the tale of our castaways they're here for a long long time. They'll have to 
                         make the best of things its an uphill climb.
                     </p>
+                    <span id="email"><a href="mailto:onboarding@ebuy.com">EMAIL US</a></span>
                 </div> 
             </main>
         )

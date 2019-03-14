@@ -11,7 +11,7 @@ class LoginNavBar extends Component{
     githubAuth = ()=>{
         // 1. User clicks and opens the new window via loginTab
         // 2. New window is open to crossOrigin but is github.com
-        loginTab(`http://localhost:3000/auth/github`)
+        loginTab(`https://ebuy.jimowens.dev/auth/github`)
     }
          
             // 3. Once user authenticates, github sends them to /auth/github/callback
