@@ -69,7 +69,11 @@ As a result of Express and React being so widely implemented, they come with som
 
 ![image_not_found](https://raw.githubusercontent.com/jimboowens/capstone/master/front-end/public/images/readme/register_image.png)
 
-If you decline and later reconsider, you are redirected home when you click on the post link and informed via a `SweetAlert` to email the eBuy team to request merchant status. Assuming you have been approved to be a merchant, you are then able to post items, as can be seen below:
+If you decline and later reconsider, you are redirected home when you click on the post link and informed via a `SweetAlert` to email the eBuy team to request merchant status. 
+
+![image_not_found](https://raw.githubusercontent.com/jimboowens/capstone/master/front-end/public/images/readme/sweetalert_image.png)
+
+Assuming you have been approved to be a merchant, you are then able to post items, as can be seen below:
 
 ![image_not_found](https://raw.githubusercontent.com/jimboowens/capstone/master/front-end/public/images/readme/post_form_image.png)
    
@@ -106,7 +110,11 @@ router.post('/search', (req,res)=>{
   }).catch((err)=>{throw err})
 })
 ```
+The results are:
 
+![image_not_found](https://raw.githubusercontent.com/jimboowens/capstone/master/front-end/public/images/readme/primary_search_results_image.png)
+![image_not_found](https://raw.githubusercontent.com/jimboowens/capstone/master/front-end/public/images/readme/secondary_search_result_image.png)
+![image_not_found](https://raw.githubusercontent.com/jimboowens/capstone/master/front-end/public/images/readme/tertiary_search_result_image.png)
 
 
 # .config 
