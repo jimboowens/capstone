@@ -27,7 +27,6 @@
       * node_modules
         * Helmet
         * bCrypt
-        * Cookie Parser
         * Passport
         * Express Session
   * PostgreSQL
