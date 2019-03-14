@@ -2,7 +2,7 @@
 ## This is an eCommerce website, utilizing the following
  - - - -
 
-First Header  | Second Header
+Back-end  | Front-end
 ------------- | -------------
 Content Cell  | Content Cell
 Content Cell  | Content Cell
